@@ -1,0 +1,94 @@
+MIRAMARE FIXED STATION, METADATA
+
+PI: Michele Giani (mgiani@ogs.it) 
+Responsible institution: Istituto Nazionale di Oceanografia e Geofisica Sperimentale (OGS), Trieste, Italy 
+Location of fixed station: 45.689N 13.708E in the Gulf of Trieste 
+Selected sensors at MIRAMARE: CO2 (Pro-Oceanus CO2-Pro CV) at 2 m depth; SBE37SMPODO (Sea-Bird) at 2 m depth; Meteo (meteorological station) at 4 m above sea level.
+Sensor deployed from the research vessel during collection of discrete samples: Sea-Bird SBE19
+Discrete samples for inorganic carbon (Total Alkalinity (TA) and pH) are collected from the station.
+
+The dataset described here is collected during the ATL2MED demonstration experiment (see below) and consists of sensor data, 
+discrete data, and metadata.
+
+The sensor data was collected from 2020-07-16 to 2023-07-23
+The discrete carbon data was collected at 2020-07-17.
+
+The CO2 sensor measured every hour.
+
+Columns in the MIRAMARE_CO2-sensor file:
+Fixed_Station: MIRAMARE
+Timestamp
+Year_YYY: year as read by the Pro-Oceanus sensor
+Month_MM: month as read by the Pro-Oceanus sensor 
+Day_DD: day as read by the Pro-Oceanus sensor 
+Hour_hh: hours as read by the Pro-Oceanus sensor
+Min_mm: minutes as read by the Pro-Oceanus sensor
+Sec_ss: seconds
+Longitude: degree E
+Latitude: degree N
+Depth_dbar: depth (pressure) of sensors (dbar) 
+T_SBE_degC: temperature logged by the SBE37SMPODO (degC)
+S_SBE: salinity logged by the SBE37SMPODO
+pCO2_raw_uatm: pCO2 in water logged by the Pro-Oceanus sensor, raw (uatm)
+pCO2_corr_uatm: pCO2 in water, from Pro-Oceanus, corrected (uatm)
+Empty cells: -999
+
+Colums in the MIRAMARE_discrete file:
+Fixed_Station: MIRAMARE
+Depth_m: depth from where the water sample is collected (m)
+Date: formate YYYY-MM-DD
+Local_time: time at sampling position, formate hh:mm
+UTC_time: UTC time at sampling position, formate hh:mm
+Latitude: degree N
+Longitude: degree E
+S_SBE19: salinity of the discrete water sample, logged by the SBE19
+T_SBE19_degC: temperature of the discrete water sample (degC), logged by the SBE19
+pH: pH measured in the lab
+T_at_pH_measurements: temperature of the water during pH measurements (degC)
+TA_umol/kg: Total Alkalinity (umol/kg)
+DO_uL/L: Dissolved oxygen analysed by Winkler titration (mL/L)
+PO4_umol/kg: phosphate (umol/kg)
+Si_umol/kg: silicate (umol/kg)
+pCO2_calculated_uatm: pCO2 calculated from TA and pH (uatm)
+
+Columns in the MIRAMARE_SBE37ODO file:
+ID: identification of the sensor
+Timestamp
+Longitude: degree E
+Latitude: degree N
+T_SBE_degC: temperature logged by SBE37SMPODO (degC)
+Cond_SBE_S/m: temperature logged by SBE37SMPODO (S/m)
+Date_SBE: date as logged by the SBE37SMPODO
+Time_SBE: time as logged by the SBE37SMPODO
+Date-Time: date and time
+DO_mL/L: dissolved oxygen (mL/L)
+S_SBE: salinity logged by SBE37SMP-ODO
+Empty cells: -999
+
+Colums in the MIRAMARE_Meteo file:
+Date-Time: DD.MM.YYYY hh:mm:ss
+Longitude: degree E
+Latitude: degree N
+WinDir_degree: wind direction (degree)
+WinSpeed_m/s: wind speed (m/s)
+T_degC: air temperature (degree C)
+Pres_mbar: air pressure (mbar)
+RelHum_%: relative humidity (%)
+WinSpeedGust_m/s: gust wind speed (m/s)
+WinDirGust_degree: gust wind speed direction (degree)
+
+Discrete samples were collected and analysed for pH and Total Alkalinity (TA). Discrete pCO2 was calculated using CO2SYS 
+(Pelletier et al., 2007), with the carbonate system constants from Lueker et al. (2000), the HSO4- constant from Dickson 
+(1990), the total borate-salinity relationship of Lee et al. (2010), and the KF constant from Perez and Fraga (1987). 
+pH was on total scale. The sensor pCO2 data (pCO2_corr) is corrected by adjusting these data to the calculated discrete pCO2.
+
+Air pressure measured by Young (R.M. Young Company) mod. 61201, range 800-1100hPa, accuracy +/-0.5 hPa.
+Air temperature meadured by Young (R.M. Young Company) mod. 41372VC, range -50- +50 degC, accuracy +/-0.3 degC.
+Wind speed measured by Young Wind Monitor (Wind monitor-MA), range 0-60 m/s, accuracy +/-0.5 m/s.
+Wnd direction measured by Young Wind Monitor (Wind monitor-MA) mod. 05106, range 0-360 degree, accuracy +/-3 degree.
+Relative humidity measurd by Young (R.M. Young Company) mod. 41372VC, range 0-100 %, accuracy +/-3 % at 23 degC.
+
+The ATL2MED demonstration experiment took place in the North-East Atlantic between October 2019 and July 2020.
+During this time, two Salidrone vessels equipped with scientific instruments sailed from the North-East Atlantic Ocean 
+to the Gulf of Trieste in the Mediterranean Sea. A number of fixed stations also took part in the experiment, 
+e.g., DYFAMED, W1M3A, E2M3A, PALOMA, and MIRAMARE, which all were visited by the Saildorne vessels.
