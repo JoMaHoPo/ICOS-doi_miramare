@@ -1,0 +1,71 @@
+PALOMA FIXED STATION, METADATA
+
+PIs: Anna Luchetta, Carolina Cantoni
+Responsible institution: Consiglio Nazionale delle Ricerche - Istituto di scienze marine (CNR-ISMAR), Trieste, Italy 
+Location of fixed station: 45.6204N 13.5658E in the Gulf of Trieste 
+Selected sensors at PALOMA: Contros HydroC CO2 at 3 m depth; Sea-Bird SBE37-ODO at 3 m depth
+Sensor deployed from the research vessel while at the fixed station: Sea-Bird SBE37 at 0.5 m depth
+Discrete samples for inorganic carbon and dissolved oxygen are collected from the station.
+
+The dataset described here is collected during the ATL2MED demonstration experiment (see below) and consists of sensor data, 
+discrete data, auxillary data, and metadata.
+
+The sensor data was collected during 2020-07-15
+The discrete carbon data was collected at 2020-07-15.
+
+The CO2 sensor measured continously for 20 min intervals, and the pCO2 data represents an averaged value over these 20 min. The time 
+is the average time.
+
+Columns in the PALOMA_sensor file:
+Fixed_Station: PALOMA
+Date-Time: from SBE37-ODO, formate YYYY-MM-DD hh:mm:ss
+Longitude: degree N
+Latitude: degree E
+Depth_dbar: depth (pressure) of sensors (dbar) 
+T_SBE37-ODO_degC: temperature logged by SBE37-ODO (degC)
+S_SBE37-ODO: salinity logged by SBE37-ODO
+pCO2_raw_uatm: pCO2 in water logged by Contros HydroC, raw (uatm)
+pCO2_corr_uatm: pCO2 in water, from Contros HydroC, corrected (uatm)
+DO_umol/kg: dissolved oxygen logged by SBE37-ODO (umol/kg)
+DO_corr_umol/kg: dissolved oxygen logged by SBE37-ODO and corrected using discrete Winkler samples (umol/kg)
+
+Columns in the PALOMA_discrete file:
+Fixed_Station: PALOMA
+Depth_m: depth from where the water sample is collected (m)
+Date: formate YYYY-MM-DD
+Local_time: time at sampling position, formate hh:mm
+UTC_time: UTC time at sampling position, formate hh:mm
+Latitude: degree N
+Longitude: degree E
+S_SBE37-ODO: salinity of the discrete water sample, measured by the SBE37-ODO sensor
+T_SBE37-ODO_degC: temperature of the discrete water sample (degC), measured by the SBE37-ODO sensor
+S_SBE37: salinity of the discrete water sample, measured by the SBE37 sensor deployed from the research vessel
+T_SBE37_degC: temperature of the discrete water sample (degC), measured by the SBE37 sensor deployed from the research vessel
+pH: pH measured in the lab
+T_at_pH_measurements: temperature of the water during pH measurements (degC)
+TA_umol/kg: Total Alkalinity (umol/kg)
+pCO2_calculated_uatm: pCO2 calculated from TA and pH (uatm)
+DO_umol/L: dissolved oxygen measured by winkler titration (umol/L)
+DO_umol/kg: dissolved oxygen measured by winkler titration (umol/kg)
+Empty cells: -999
+
+Columns in the PALOMA_auxiliary_CTD file:
+Fixed_Station: PALOMA
+Date-Time: from SBE37, formate YYYY-MM-DD hh:mm:ss
+Longitude: degree N
+Latitude: degree E
+Depth_dbar: depth (pressure) of sensors (dbar) 
+T_SBE37_degC: temperature logged by SBE37 (degC)
+S_SBE37: salinity logged by SBE37
+
+Discrete samples were collected and analysed for pH and Total Alkalinity (TA) and dissolved oxygen (Winkler method). Discrete pCO2 was calculated 
+using CO2SYS (Pelletier et al., 2007), with the carbonate system constants from Lueker et al. (2000), the HSO4- constant from Dickson (1990), the 
+total borate-salinity relationship of Lee et al. (2010), and the KF constant from Perez and Fraga (1987). pH on total scale and PO4=0 and Si=2 umol/kg.
+The sensor pCO2 data (pCO2_corr) is corrected by adjusting these data to the calculated discrete pCO2 and sensor DO data was corrected to the discrete DO measurements.
+
+Dissolved oxygen (DO) data measured by the sensor is corrected (DO_corr) using discrete oxygen samples analysed by winkler titration.
+
+The ATL2MED demonstration experiment took place in the North-East Atlantic between October 2019 and July 2020.
+During this time, two Salidrone vessels equipped with scientific instruments sailed from the North-East Atlantic Ocean 
+to the Gulf of Trieste in the Mediterranean Sea. A number of fixed stations also took part in the experiment, 
+e.g., DYFAMED, W1M3A, E2M3A, PALOMA, and MIRAMARE, which all were visited by the Saildorne vessels.

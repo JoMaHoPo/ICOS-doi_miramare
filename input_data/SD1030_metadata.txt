@@ -1,0 +1,51 @@
+SD1030 metadata
+
+PI: Ingunn Skjelvan, Riccardo Martellucci, Michele Giani, Vanessa Cardin, Elena Mauri, Carolina Cantoni, Anna Luchetta, Roberto Bozzano, 
+Sara Pensieri, Laurent Coppola, Marine Fourrier, Melf Paulsen, Bjorn Fiedler, Benjamin Pfeil
+ 
+Responsible institutions: 
+NORCE Norwegian Research Centre (Norway)
+Istituto Nazionale di Oceanografia e Geofisica Sperimentale (Italy)
+Consiglio Nazionale delle Ricerche - Istituto di scienze marine (Italy)
+Consiglio Nazionale delle Ricerche - Istituto per lo studio degli impatti Antropici e Sostenibilità in ambiente marino (Italy)
+Laboratoire Océanographique de Villefranche/French National Centre for Scientific Research (France)
+GEOMAR Helmholtz Centre for Ocean Research Kiel (Germany)
+
+SD1030 is an Autonomous Surface Vehicle (ASV) provided by the US company Saildrone. The SD1030 took part in the ATL2MED demonstration experiment 
+from October 2019 to July 2020. During this time, the SD1030 equipped with scientific instruments sailed from the North-East Atlantic Ocean 
+to the Gulf of Trieste in the Mediterranean Sea. A number of fixed ocean stations also took part in the experiment, 
+e.g., DYFAMED, W1M3A, E2M3A, PALOMA, and MIRAMARE, which all were visited by the SD1030 vehicle. A second ASV, SD1053, also took part in the 
+demonstration experiment.
+
+The dataset described here is collected by the SD1030 during the ATL2MED demonstration experiment and consists of sensor data in a separate file 
+(SD1030_T_S_DO_CO2_final) and metadata (SD1030, described here).
+
+The datafile contains the following columns:
+Platform:
+Date-Time: DD.MM.YYY hh:mm:ss
+Longitude: longitude E
+Latitude: latitude N
+Depth_m: depth of the SBE37ODO sensor
+T_SBE_degC: temperature measured by SBE37-SMP-ODO (degree C)
+S_SBE_corr: salinity measured by SBE37-SMP-ODO and corrected for drift
+DO_SBE_uncorr_umol/L: dissolved oxygen measured by SBE37-SMP-ODO, uncorrected
+RelHum_%: relative humidity (%)
+Press_atm_hPa: atmospheric pressure (hPa)
+T_air_degC: air temperature (degree C)
+DOsat_uncorr_%: dissolved oxygen saturation (%), uncorrected
+DOsat_corr_%:  dissolved oxygen saturation (%), corrected
+pO2_mbar: oxygen partial pressure (mbar), matlab function named O2ctoO2p
+VP: vapour pressure calculated from T_air according to equation in Aanderaa Optode (model 4330) manual
+pO2_sat_mbar: oxygen partial pressure saturation calculated from T_atm, Press_atm, and RelHum
+Gain: correction factor, calculated from pO2_sat_mbar/pO2_mbar
+DO_SBE_corr_umol/L: dissolved oxygen measured by SBE37-SMP-ODO, corrected for drift and offset
+Press_atm_LiCor_hPA: atmospheric pressure measured at atmospheric intake for CO2 measurements 1 m asl, used for pCO2 calculations
+xCO2_sea_dry_umol/mol: mol fraction CO2 in sea water, dry value (umol/mol) 
+xCO2_air_dry_umol/mol: mol fraction CO2 in air, dry value (umol/mol)
+pCO2_sea_wet_uatm: partial pressure of CO2 in sea water, at 100% humidity (uatm)
+NaN: no data
+
+Correction of dissolved oxygen is following that of Bittig et al. (2016; 2017) and Johnson et al. (2015).
+Correction of CO2 is performed by PMEL (USA) as described in Martellucci et al. (in prep), and the pCO2 accuracy is < 5 uatm. 
+
+Note that between 27 May 2020 and 6 June 2020, the SD1030 was at key in Sicily.
